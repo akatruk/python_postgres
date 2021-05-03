@@ -1,22 +1,24 @@
 import psycopg2
 import sys
+f1 = 'scrips/pg_version.sql'
+
+def read_file(text):
+    with open(f1, 'r') as f2:
+        return f2.read()
 
 con = None
 
 try:
 
-    # con = psycopg2.connect(dbname=input('Введите имя базы данных: '),user=input('Введите имя пользователя: '), host=input('Введите имя\IP хоста: '))
     con = psycopg2.connect(dbname='postgres',user='akatruk', host='')
 
     cur = con.cursor()
-    print('Соединение установленно!\n')
-    print('Версия базы данных:')
-    cur.execute('SELECT version()')
-    # Audit OS:
-    # checking basic parameters:
+    print('Database version:')
+    cur.execute(read_file(f1))
 
     version = cur.fetchall()
-    print(version)
+    for p1 in version:
+            print("".join(p1))
 
 except psycopg2.DatabaseError as e:
 
