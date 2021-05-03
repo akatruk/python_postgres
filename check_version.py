@@ -15,7 +15,7 @@ try:
     # Audit OS:
     # checking basic parameters:
 
-    version = cur.fetchone()[0]
+    version = cur.fetchall()
     print(version)
 
 except psycopg2.DatabaseError as e:
