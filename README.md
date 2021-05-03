@@ -10,13 +10,13 @@
 ##### 1st step::
 ##### Server performance analyse
 
-1. pg_tune calculator recomendation::
-shared_buffer 25%
-effective_cash_size 75%
-work_mem ?
-??
+- pg_tune calculator recomendation::
+    shared_buffer 25%
+    effective_cash_size 75%
+    work_mem ?
+    ??
 
-2. Connections analise::
+- Connections analise::
 idle
 idle in transactions
 max
@@ -29,7 +29,13 @@ pip install flusk
 ##### 2nd step::
 ##### Database analyse
 
-===%%% Database analyse %%%===
-1. database size
-2. biggest database ==> select database ==> 
+- database size
+- biggest database ==> select database ==> 
+
+##### 2nd step::
+##### Database analyse
+
+
+
+
 
