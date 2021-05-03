@@ -2,8 +2,13 @@
 
 # What need to add:
 
-## I step::
-===%%% Server performance analyse %%%===
+##### 0 step::
+##### Audit configuration
+
+1. Get information about Postgres server
+
+##### 1st step::
+##### Server performance analyse
 
 1. pg_tune calculator recomendation::
 shared_buffer 25%
@@ -21,7 +26,9 @@ recomendations
 Flask
 pip install flusk
 
-## II steps::
+##### 2nd step::
+##### Database analyse
+
 ===%%% Database analyse %%%===
 1. database size
 2. biggest database ==> select database ==> 

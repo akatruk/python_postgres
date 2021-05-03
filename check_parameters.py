@@ -13,7 +13,7 @@ try:
     con = psycopg2.connect(dbname='postgres',user='akatruk', host='')
 
     cur = con.cursor()
-    print('\nMain PostgreSQL parameters:\n')
+    print('\nMain PostgreSQL parameters:')
     cur.execute(read_file(f1))
 
     version = cur.fetchall()
