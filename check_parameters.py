@@ -13,12 +13,12 @@ try:
     con = psycopg2.connect(dbname='postgres',user='akatruk', host='')
 
     cur = con.cursor()
-    print('\n\rMain PostgreSQL parameters:')
+    print('\nMain PostgreSQL parameters:\n')
     cur.execute(read_file(f1))
 
     version = cur.fetchall()
     for p1 in version:
-        print(p1)
+            print("".join(p1))
 
 except psycopg2.DatabaseError as e:
 
